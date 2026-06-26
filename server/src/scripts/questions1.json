@@ -1,0 +1,1321 @@
+[
+  {
+    "title": "Two Sum",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice.",
+    "difficulty": "Easy",
+    "topic": "Arrays",
+    "companies": [
+      "Google",
+      "Amazon"
+    ],
+    "tags": [
+      "Array",
+      "Hash Map"
+    ],
+    "constraints": "2 <= nums.length <= 10^4\n-10^9 <= nums[i] <= 10^9\n-10^9 <= target <= 10^9\nOnly one valid answer exists.",
+    "examples": [
+      {
+        "input": "nums = [2,7,11,15], target = 9",
+        "output": "[0,1]",
+        "explanation": "nums[0] + nums[1] = 2 + 7 = 9, so return [0, 1]."
+      },
+      {
+        "input": "nums = [3,2,4], target = 6",
+        "output": "[1,2]",
+        "explanation": "nums[1] + nums[2] = 2 + 4 = 6, so return [1, 2]."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "nums = [2,7,11,15]\ntarget = 9",
+        "expectedOutput": "[0,1]"
+      },
+      {
+        "input": "nums = [3,2,4]\ntarget = 6",
+        "expectedOutput": "[1,2]"
+      },
+      {
+        "input": "nums = [3,3]\ntarget = 6",
+        "expectedOutput": "[0,1]"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def twoSum(self, nums: list[int], target: int) -> list[int]:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number[]}\n */\nvar twoSum = function(nums, target) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Best Time to Buy and Sell Stock",
+    "description": "You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.",
+    "difficulty": "Easy",
+    "topic": "Arrays",
+    "companies": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "tags": [
+      "Array",
+      "Greedy",
+      "Dynamic Programming"
+    ],
+    "constraints": "1 <= prices.length <= 10^5\n0 <= prices[i] <= 10^4",
+    "examples": [
+      {
+        "input": "prices = [7,1,5,3,6,4]",
+        "output": "5",
+        "explanation": "Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6 - 1 = 5."
+      },
+      {
+        "input": "prices = [7,6,4,3,1]",
+        "output": "0",
+        "explanation": "In this case, no transactions are done and the max profit = 0."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "prices = [7,1,5,3,6,4]",
+        "expectedOutput": "5"
+      },
+      {
+        "input": "prices = [7,6,4,3,1]",
+        "expectedOutput": "0"
+      },
+      {
+        "input": "prices = [1,2]",
+        "expectedOutput": "1"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def maxProfit(self, prices: list[int]) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {number[]} prices\n * @return {number}\n */\nvar maxProfit = function(prices) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int maxProfit(int[] prices) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    int maxProfit(vector<int>& prices) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Maximum Subarray",
+    "description": "Given an integer array nums, find the subarray with the largest sum, and return its sum.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "companies": [
+      "Google",
+      "Meta"
+    ],
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Greedy",
+      "Divide and Conquer"
+    ],
+    "constraints": "1 <= nums.length <= 10^5\n-10^4 <= nums[i] <= 10^4",
+    "examples": [
+      {
+        "input": "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6",
+        "explanation": "The subarray [4,-1,2,1] has the largest sum 6."
+      },
+      {
+        "input": "nums = [1]",
+        "output": "1",
+        "explanation": "The subarray [1] has the largest sum 1."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+        "expectedOutput": "6"
+      },
+      {
+        "input": "nums = [1]",
+        "expectedOutput": "1"
+      },
+      {
+        "input": "nums = [-1,-2,-3,-4]",
+        "expectedOutput": "-1"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def maxSubArray(self, nums: list[int]) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxSubArray = function(nums) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int maxSubArray(int[] nums) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    int maxSubArray(vector<int>& nums) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Product of Array Except Self",
+    "description": "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i]. The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer. You must write an algorithm that runs in O(n) time and without using the division operation.",
+    "difficulty": "Medium",
+    "topic": "Arrays",
+    "companies": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "tags": [
+      "Array",
+      "Prefix Sum"
+    ],
+    "constraints": "2 <= nums.length <= 10^5\n-30 <= nums[i] <= 30\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.",
+    "examples": [
+      {
+        "input": "nums = [1,2,3,4]",
+        "output": "[24,12,8,6]",
+        "explanation": "For index 0: 2*3*4=24, index 1: 1*3*4=12, index 2: 1*2*4=8, index 3: 1*2*3=6."
+      },
+      {
+        "input": "nums = [-1,1,0,-3,3]",
+        "output": "[0,0,9,0,0]",
+        "explanation": "The zero causes most products to be 0 except the position of the zero itself."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "nums = [1,2,3,4]",
+        "expectedOutput": "[24,12,8,6]"
+      },
+      {
+        "input": "nums = [-1,1,0,-3,3]",
+        "expectedOutput": "[0,0,9,0,0]"
+      },
+      {
+        "input": "nums = [2,3]",
+        "expectedOutput": "[3,2]"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def productExceptSelf(self, nums: list[int]) -> list[int]:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar productExceptSelf = function(nums) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    vector<int> productExceptSelf(vector<int>& nums) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Trapping Rain Water",
+    "description": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
+    "difficulty": "Hard",
+    "topic": "Arrays",
+    "companies": [
+      "Google",
+      "Amazon"
+    ],
+    "tags": [
+      "Array",
+      "Two Pointers",
+      "Stack",
+      "Monotonic Stack",
+      "Prefix Sum"
+    ],
+    "constraints": "n == height.length\n1 <= n <= 2 * 10^4\n0 <= height[i] <= 10^5",
+    "examples": [
+      {
+        "input": "height = [0,1,0,2,1,0,1,3,2,1,2,1]",
+        "output": "6",
+        "explanation": "The elevation map traps 6 units of rain water."
+      },
+      {
+        "input": "height = [4,2,0,3,2,5]",
+        "output": "9",
+        "explanation": "The elevation map traps 9 units of rain water."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "height = [0,1,0,2,1,0,1,3,2,1,2,1]",
+        "expectedOutput": "6"
+      },
+      {
+        "input": "height = [4,2,0,3,2,5]",
+        "expectedOutput": "9"
+      },
+      {
+        "input": "height = [3,0,2,0,4]",
+        "expectedOutput": "7"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def trap(self, height: list[int]) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {number[]} height\n * @return {number}\n */\nvar trap = function(height) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int trap(int[] height) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    int trap(vector<int>& height) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Valid Anagram",
+    "description": "Given two strings s and t, return true if t is an anagram of s, and false otherwise. An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, using all the original letters exactly once.",
+    "difficulty": "Easy",
+    "topic": "Strings",
+    "companies": [
+      "Amazon",
+      "Any"
+    ],
+    "tags": [
+      "String",
+      "Hash Map",
+      "Sorting"
+    ],
+    "constraints": "1 <= s.length, t.length <= 5 * 10^4\ns and t consist of lowercase English letters.",
+    "examples": [
+      {
+        "input": "s = \"anagram\", t = \"nagaram\"",
+        "output": "true",
+        "explanation": "Both strings contain the same characters with the same frequencies."
+      },
+      {
+        "input": "s = \"rat\", t = \"car\"",
+        "output": "false",
+        "explanation": "The characters do not match: rat has r,a,t while car has c,a,r."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "s = \"anagram\"\nt = \"nagaram\"",
+        "expectedOutput": "true"
+      },
+      {
+        "input": "s = \"rat\"\nt = \"car\"",
+        "expectedOutput": "false"
+      },
+      {
+        "input": "s = \"a\"\nt = \"a\"",
+        "expectedOutput": "true"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {boolean}\n */\nvar isAnagram = function(s, t) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    bool isAnagram(string& s, string& t) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Longest Substring Without Repeating Characters",
+    "description": "Given a string s, find the length of the longest substring without repeating characters.",
+    "difficulty": "Medium",
+    "topic": "Strings",
+    "companies": [
+      "Google",
+      "Meta",
+      "Microsoft"
+    ],
+    "tags": [
+      "String",
+      "Hash Map",
+      "Sliding Window",
+      "Two Pointers"
+    ],
+    "constraints": "0 <= s.length <= 5 * 10^4\ns consists of English letters, digits, symbols and spaces.",
+    "examples": [
+      {
+        "input": "s = \"abcabcbb\"",
+        "output": "3",
+        "explanation": "The answer is \"abc\", with the length of 3."
+      },
+      {
+        "input": "s = \"bbbbb\"",
+        "output": "1",
+        "explanation": "The answer is \"b\", with the length of 1."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "s = \"abcabcbb\"",
+        "expectedOutput": "3"
+      },
+      {
+        "input": "s = \"bbbbb\"",
+        "expectedOutput": "1"
+      },
+      {
+        "input": "s = \"pwwkew\"",
+        "expectedOutput": "3"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def lengthOfLongestSubstring(self, s: str) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar lengthOfLongestSubstring = function(s) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    int lengthOfLongestSubstring(string& s) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Minimum Window Substring",
+    "description": "Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string \"\".",
+    "difficulty": "Hard",
+    "topic": "Strings",
+    "companies": [
+      "Google",
+      "Meta"
+    ],
+    "tags": [
+      "String",
+      "Hash Map",
+      "Sliding Window",
+      "Two Pointers"
+    ],
+    "constraints": "m == s.length\nn == t.length\n1 <= m, n <= 10^5\ns and t consist of uppercase and lowercase English letters.",
+    "examples": [
+      {
+        "input": "s = \"ADOBECODEBANC\", t = \"ABC\"",
+        "output": "\"BANC\"",
+        "explanation": "The minimum window substring \"BANC\" includes 'A', 'B', and 'C' from string t."
+      },
+      {
+        "input": "s = \"a\", t = \"a\"",
+        "output": "\"a\"",
+        "explanation": "The entire string s is the minimum window."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "s = \"ADOBECODEBANC\"\nt = \"ABC\"",
+        "expectedOutput": "\"BANC\""
+      },
+      {
+        "input": "s = \"a\"\nt = \"a\"",
+        "expectedOutput": "\"a\""
+      },
+      {
+        "input": "s = \"a\"\nt = \"aa\"",
+        "expectedOutput": "\"\""
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def minWindow(self, s: str, t: str) -> str:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {string}\n */\nvar minWindow = function(s, t) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public String minWindow(String s, String t) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    string minWindow(string& s, string& t) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Reverse Linked List",
+    "description": "Given the head of a singly linked list, reverse the list, and return the reversed list.",
+    "difficulty": "Easy",
+    "topic": "Linked Lists",
+    "companies": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "tags": [
+      "Linked List",
+      "Recursion",
+      "Two Pointers"
+    ],
+    "constraints": "The number of nodes in the list is the range [0, 5000].\n-5000 <= Node.val <= 5000",
+    "examples": [
+      {
+        "input": "head = [1,2,3,4,5]",
+        "output": "[5,4,3,2,1]",
+        "explanation": "The linked list 1->2->3->4->5 becomes 5->4->3->2->1."
+      },
+      {
+        "input": "head = [1,2]",
+        "output": "[2,1]",
+        "explanation": "The linked list 1->2 becomes 2->1."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "head = [1,2,3,4,5]",
+        "expectedOutput": "[5,4,3,2,1]"
+      },
+      {
+        "input": "head = [1,2]",
+        "expectedOutput": "[2,1]"
+      },
+      {
+        "input": "head = []",
+        "expectedOutput": "[]"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar reverseList = function(head) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public ListNode reverseList(ListNode head) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    ListNode* reverseList(ListNode* head) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef buildLinkedList(arr, pos=-1):\n    if not arr: return None\n    nodes = [ListNode(v) for v in arr]\n    for i in range(len(nodes)-1):\n        nodes[i].next = nodes[i+1]\n    if pos >= 0:\n        nodes[-1].next = nodes[pos]\n    return nodes[0]"
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Merge Two Sorted Lists",
+    "description": "You are given the heads of two sorted linked lists list1 and list2. Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists. Return the head of the merged linked list.",
+    "difficulty": "Easy",
+    "topic": "Linked Lists",
+    "companies": [
+      "Google",
+      "Amazon"
+    ],
+    "tags": [
+      "Linked List",
+      "Recursion",
+      "Two Pointers"
+    ],
+    "constraints": "The number of nodes in both lists is in the range [0, 50].\n-100 <= Node.val <= 100\nBoth list1 and list2 are sorted in non-decreasing order.",
+    "examples": [
+      {
+        "input": "list1 = [1,2,4], list2 = [1,3,4]",
+        "output": "[1,1,2,3,4,4]",
+        "explanation": "Merging the two sorted lists produces [1,1,2,3,4,4]."
+      },
+      {
+        "input": "list1 = [], list2 = []",
+        "output": "[]",
+        "explanation": "Both lists are empty so the result is empty."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "list1 = [1,2,4]\nlist2 = [1,3,4]",
+        "expectedOutput": "[1,1,2,3,4,4]"
+      },
+      {
+        "input": "list1 = []\nlist2 = []",
+        "expectedOutput": "[]"
+      },
+      {
+        "input": "list1 = []\nlist2 = [0]",
+        "expectedOutput": "[0]"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {ListNode} list1\n * @param {ListNode} list2\n * @return {ListNode}\n */\nvar mergeTwoLists = function(list1, list2) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef buildLinkedList(arr, pos=-1):\n    if not arr: return None\n    nodes = [ListNode(v) for v in arr]\n    for i in range(len(nodes)-1):\n        nodes[i].next = nodes[i+1]\n    if pos >= 0:\n        nodes[-1].next = nodes[pos]\n    return nodes[0]"
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Linked List Cycle",
+    "description": "Given head, the head of a linked list, determine if the linked list has a cycle in it. There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Return true if there is a cycle in the linked list. Otherwise, return false.",
+    "difficulty": "Medium",
+    "topic": "Linked Lists",
+    "companies": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "tags": [
+      "Linked List",
+      "Fast and Slow Pointers",
+      "Hash Map"
+    ],
+    "constraints": "The number of nodes in the list is in the range [0, 10^4].\n-10^5 <= Node.val <= 10^5\npos is -1 or a valid index in the linked list.",
+    "examples": [
+      {
+        "input": "head = [3,2,0,-4], pos = 1",
+        "output": "true",
+        "explanation": "There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed)."
+      },
+      {
+        "input": "head = [1,2], pos = 0",
+        "output": "true",
+        "explanation": "There is a cycle in the linked list, where the tail connects to the 0th node."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "head = [3,2,0,-4]\npos = 1",
+        "expectedOutput": "true"
+      },
+      {
+        "input": "head = [1,2]\npos = 0",
+        "expectedOutput": "true"
+      },
+      {
+        "input": "head = [1]\npos = -1",
+        "expectedOutput": "false"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def hasCycle(self, head: Optional[ListNode]) -> bool:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {ListNode} head\n * @return {boolean}\n */\nvar hasCycle = function(head) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public boolean hasCycle(ListNode head) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    bool hasCycle(ListNode* head) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef buildLinkedList(arr, pos=-1):\n    if not arr: return None\n    nodes = [ListNode(v) for v in arr]\n    for i in range(len(nodes)-1):\n        nodes[i].next = nodes[i+1]\n    if pos >= 0:\n        nodes[-1].next = nodes[pos]\n    return nodes[0]"
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Maximum Depth of Binary Tree",
+    "description": "Given the root of a binary tree, return its maximum depth. A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.",
+    "difficulty": "Easy",
+    "topic": "Trees",
+    "companies": [
+      "Google",
+      "Any"
+    ],
+    "tags": [
+      "Tree",
+      "DFS",
+      "BFS",
+      "Recursion"
+    ],
+    "constraints": "The number of nodes in the tree is in the range [0, 10^4].\n-100 <= Node.val <= 100",
+    "examples": [
+      {
+        "input": "root = [3,9,20,null,null,15,7]",
+        "output": "3",
+        "explanation": "The maximum depth is 3 (path: 3 -> 20 -> 15 or 3 -> 20 -> 7)."
+      },
+      {
+        "input": "root = [1,null,2]",
+        "output": "2",
+        "explanation": "The maximum depth is 2 (path: 1 -> 2)."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "root = [3,9,20,null,null,15,7]",
+        "expectedOutput": "3"
+      },
+      {
+        "input": "root = [1,null,2]",
+        "expectedOutput": "2"
+      },
+      {
+        "input": "root = []",
+        "expectedOutput": "0"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def maxDepth(self, root: Optional[TreeNode]) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar maxDepth = function(root) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int maxDepth(TreeNode root) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    int maxDepth(TreeNode* root) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(arr):\n    if not arr: return None\n    root = TreeNode(arr[0])\n    queue = [root]\n    i = 1\n    while queue and i < len(arr):\n        node = queue.pop(0)\n        if i < len(arr) and arr[i] is not None:\n            node.left = TreeNode(arr[i])\n            queue.append(node.left)\n        i += 1\n        if i < len(arr) and arr[i] is not None:\n            node.right = TreeNode(arr[i])\n            queue.append(node.right)\n        i += 1\n    return root"
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Validate Binary Search Tree",
+    "description": "Given the root of a binary tree, determine if it is a valid binary search tree (BST). A valid BST is defined as follows: The left subtree of a node contains only nodes with keys less than the node's key. The right subtree of a node contains only nodes with keys greater than the node's key. Both the left and right subtrees must also be binary search trees.",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "companies": [
+      "Amazon",
+      "Microsoft"
+    ],
+    "tags": [
+      "Tree",
+      "Binary Search Tree",
+      "DFS",
+      "Recursion"
+    ],
+    "constraints": "The number of nodes in the tree is in the range [1, 10^4].\n-2^31 <= Node.val <= 2^31 - 1",
+    "examples": [
+      {
+        "input": "root = [2,1,3]",
+        "output": "true",
+        "explanation": "The tree has 2 as root, 1 as left child, and 3 as right child \u2014 a valid BST."
+      },
+      {
+        "input": "root = [5,1,4,null,null,3,6]",
+        "output": "false",
+        "explanation": "The root node's value is 5 but its right child's value is 4, which is less than 5."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "root = [2,1,3]",
+        "expectedOutput": "true"
+      },
+      {
+        "input": "root = [5,1,4,null,null,3,6]",
+        "expectedOutput": "false"
+      },
+      {
+        "input": "root = [2,2,2]",
+        "expectedOutput": "false"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def isValidBST(self, root: Optional[TreeNode]) -> bool:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {TreeNode} root\n * @return {boolean}\n */\nvar isValidBST = function(root) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public boolean isValidBST(TreeNode root) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    bool isValidBST(TreeNode* root) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(arr):\n    if not arr: return None\n    root = TreeNode(arr[0])\n    queue = [root]\n    i = 1\n    while queue and i < len(arr):\n        node = queue.pop(0)\n        if i < len(arr) and arr[i] is not None:\n            node.left = TreeNode(arr[i])\n            queue.append(node.left)\n        i += 1\n        if i < len(arr) and arr[i] is not None:\n            node.right = TreeNode(arr[i])\n            queue.append(node.right)\n        i += 1\n    return root"
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Binary Tree Level Order Traversal",
+    "description": "Given the root of a binary tree, return the level order traversal of its nodes' values (i.e., from left to right, level by level).",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "companies": [
+      "Google",
+      "Meta"
+    ],
+    "tags": [
+      "Tree",
+      "BFS",
+      "Queue"
+    ],
+    "constraints": "The number of nodes in the tree is in the range [0, 2000].\n-1000 <= Node.val <= 1000",
+    "examples": [
+      {
+        "input": "root = [3,9,20,null,null,15,7]",
+        "output": "[[3],[9,20],[15,7]]",
+        "explanation": "Level 0: [3], Level 1: [9,20], Level 2: [15,7]."
+      },
+      {
+        "input": "root = [1]",
+        "output": "[[1]]",
+        "explanation": "Only one node, so the result is [[1]]."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "root = [3,9,20,null,null,15,7]",
+        "expectedOutput": "[[3],[9,20],[15,7]]"
+      },
+      {
+        "input": "root = [1]",
+        "expectedOutput": "[[1]]"
+      },
+      {
+        "input": "root = []",
+        "expectedOutput": "[]"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def levelOrder(self, root: Optional[TreeNode]) -> list[list[int]]:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {TreeNode} root\n * @return {number[][]}\n */\nvar levelOrder = function(root) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public List<List<Integer>> levelOrder(TreeNode root) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    vector<vector<int>> levelOrder(TreeNode* root) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(arr):\n    if not arr: return None\n    root = TreeNode(arr[0])\n    queue = [root]\n    i = 1\n    while queue and i < len(arr):\n        node = queue.pop(0)\n        if i < len(arr) and arr[i] is not None:\n            node.left = TreeNode(arr[i])\n            queue.append(node.left)\n        i += 1\n        if i < len(arr) and arr[i] is not None:\n            node.right = TreeNode(arr[i])\n            queue.append(node.right)\n        i += 1\n    return root"
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Binary Tree Maximum Path Sum",
+    "description": "A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root. Given the root of a binary tree, return the maximum path sum of any non-empty path.",
+    "difficulty": "Hard",
+    "topic": "Trees",
+    "companies": [
+      "Google",
+      "Meta"
+    ],
+    "tags": [
+      "Tree",
+      "DFS",
+      "Recursion",
+      "Dynamic Programming"
+    ],
+    "constraints": "The number of nodes in the tree is in the range [1, 3 * 10^4].\n-1000 <= Node.val <= 1000",
+    "examples": [
+      {
+        "input": "root = [1,2,3]",
+        "output": "6",
+        "explanation": "The optimal path is 2 -> 1 -> 3 with a path sum of 2 + 1 + 3 = 6."
+      },
+      {
+        "input": "root = [-10,9,20,null,null,15,7]",
+        "output": "42",
+        "explanation": "The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 42."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "root = [1,2,3]",
+        "expectedOutput": "6"
+      },
+      {
+        "input": "root = [-10,9,20,null,null,15,7]",
+        "expectedOutput": "42"
+      },
+      {
+        "input": "root = [-3]",
+        "expectedOutput": "-3"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def maxPathSum(self, root: Optional[TreeNode]) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar maxPathSum = function(root) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int maxPathSum(TreeNode root) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    int maxPathSum(TreeNode* root) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(arr):\n    if not arr: return None\n    root = TreeNode(arr[0])\n    queue = [root]\n    i = 1\n    while queue and i < len(arr):\n        node = queue.pop(0)\n        if i < len(arr) and arr[i] is not None:\n            node.left = TreeNode(arr[i])\n            queue.append(node.left)\n        i += 1\n        if i < len(arr) and arr[i] is not None:\n            node.right = TreeNode(arr[i])\n            queue.append(node.right)\n        i += 1\n    return root"
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Number of Islands",
+    "description": "Given an m x n 2D binary grid which represents a map of '1's (land) and '0's (water), return the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.",
+    "difficulty": "Medium",
+    "topic": "Graphs",
+    "companies": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "tags": [
+      "Array",
+      "Graph",
+      "DFS",
+      "BFS",
+      "Union Find"
+    ],
+    "constraints": "m == grid.length\nn == grid[i].length\n1 <= m, n <= 300\ngrid[i][j] is '0' or '1'.",
+    "examples": [
+      {
+        "input": "grid = [[\"1\",\"1\",\"1\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"0\",\"0\"]]",
+        "output": "1",
+        "explanation": "All the land cells are connected, forming one island."
+      },
+      {
+        "input": "grid = [[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"1\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"1\",\"1\"]]",
+        "output": "3",
+        "explanation": "There are three separate islands in the grid."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "grid = [[\"1\",\"1\",\"1\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"0\",\"0\"]]",
+        "expectedOutput": "1"
+      },
+      {
+        "input": "grid = [[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"1\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"1\",\"1\"]]",
+        "expectedOutput": "3"
+      },
+      {
+        "input": "grid = [[\"1\"]]",
+        "expectedOutput": "1"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def numIslands(self, grid: list[list[str]]) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {character[][]} grid\n * @return {number}\n */\nvar numIslands = function(grid) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int numIslands(char[][] grid) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    int numIslands(vector<vector<char>>& grid) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": "import json\n\ndef parseGrid(grid_str):\n    return json.loads(grid_str)"
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Clone Graph",
+    "description": "Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph. Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors.",
+    "difficulty": "Medium",
+    "topic": "Graphs",
+    "companies": [
+      "Meta",
+      "Google"
+    ],
+    "tags": [
+      "Graph",
+      "DFS",
+      "BFS",
+      "Hash Map"
+    ],
+    "constraints": "The number of nodes in the graph is in the range [0, 100].\n1 <= Node.val <= 100\nNode.val is unique for each node.\nThere are no repeated edges and no self-loops in the graph.\nThe graph is connected and all nodes can be visited starting from the given node.",
+    "examples": [
+      {
+        "input": "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+        "output": "[[2,4],[1,3],[2,4],[1,3]]",
+        "explanation": "The cloned graph has the same structure as the original."
+      },
+      {
+        "input": "adjList = [[]]",
+        "output": "[[]]",
+        "explanation": "A single node with no neighbors is cloned as-is."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+        "expectedOutput": "[[2,4],[1,3],[2,4],[1,3]]"
+      },
+      {
+        "input": "adjList = [[]]",
+        "expectedOutput": "[[]]"
+      },
+      {
+        "input": "adjList = []",
+        "expectedOutput": "[]"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {Node} node\n * @return {Node}\n */\nvar cloneGraph = function(node) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public Node cloneGraph(Node node) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    Node* cloneGraph(Node* node) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": "from collections import defaultdict\n\nclass Node:\n    def __init__(self, val=0, neighbors=None):\n        self.val = val\n        self.neighbors = neighbors if neighbors is not None else []\n\ndef buildGraph(adjList):\n    if not adjList:\n        return None\n    nodes = {i+1: Node(i+1) for i in range(len(adjList))}\n    for i, neighbors in enumerate(adjList):\n        nodes[i+1].neighbors = [nodes[n] for n in neighbors]\n    return nodes[1]"
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Course Schedule",
+    "description": "There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai. Return true if you can finish all courses. Otherwise, return false.",
+    "difficulty": "Hard",
+    "topic": "Graphs",
+    "companies": [
+      "Google",
+      "Amazon"
+    ],
+    "tags": [
+      "Graph",
+      "DFS",
+      "BFS",
+      "Topological Sort"
+    ],
+    "constraints": "1 <= numCourses <= 2000\n0 <= prerequisites.length <= 5000\nprerequisites[i].length == 2\n0 <= ai, bi < numCourses\nAll the pairs prerequisites[i] are unique.",
+    "examples": [
+      {
+        "input": "numCourses = 2, prerequisites = [[1,0]]",
+        "output": "true",
+        "explanation": "Take course 0 first, then course 1. No cycle exists."
+      },
+      {
+        "input": "numCourses = 2, prerequisites = [[1,0],[0,1]]",
+        "output": "false",
+        "explanation": "Course 0 depends on course 1 and course 1 depends on course 0 \u2014 a cycle."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "numCourses = 2\nprerequisites = [[1,0]]",
+        "expectedOutput": "true"
+      },
+      {
+        "input": "numCourses = 2\nprerequisites = [[1,0],[0,1]]",
+        "expectedOutput": "false"
+      },
+      {
+        "input": "numCourses = 1\nprerequisites = []",
+        "expectedOutput": "true"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def canFinish(self, numCourses: int, prerequisites: list[list[int]]) -> bool:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {number} numCourses\n * @param {number[][]} prerequisites\n * @return {boolean}\n */\nvar canFinish = function(numCourses, prerequisites) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public boolean canFinish(int numCourses, int[][] prerequisites) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": "import json\nfrom collections import defaultdict\n\ndef buildAdjList(num_courses, prerequisites):\n    graph = defaultdict(list)\n    for course, prereq in prerequisites:\n        graph[prereq].append(course)\n    return graph\n\ndef parsePrerequisites(prereq_str):\n    return json.loads(prereq_str)"
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Climbing Stairs",
+    "description": "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
+    "difficulty": "Easy",
+    "topic": "Dynamic Programming",
+    "companies": [
+      "Google",
+      "Amazon"
+    ],
+    "tags": [
+      "Dynamic Programming",
+      "Memoization",
+      "Math",
+      "Recursion"
+    ],
+    "constraints": "1 <= n <= 45",
+    "examples": [
+      {
+        "input": "n = 2",
+        "output": "2",
+        "explanation": "There are two ways to climb to the top: 1+1 or 2."
+      },
+      {
+        "input": "n = 3",
+        "output": "3",
+        "explanation": "There are three ways: 1+1+1, 1+2, or 2+1."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "n = 2",
+        "expectedOutput": "2"
+      },
+      {
+        "input": "n = 3",
+        "expectedOutput": "3"
+      },
+      {
+        "input": "n = 45",
+        "expectedOutput": "1836311903"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def climbStairs(self, n: int) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar climbStairs = function(n) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int climbStairs(int n) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    int climbStairs(int n) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Coin Change",
+    "description": "You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money. Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1. You may assume that you have an infinite number of each kind of coin.",
+    "difficulty": "Medium",
+    "topic": "Dynamic Programming",
+    "companies": [
+      "Google",
+      "Amazon",
+      "Stripe"
+    ],
+    "tags": [
+      "Dynamic Programming",
+      "Memoization",
+      "BFS",
+      "Recursion"
+    ],
+    "constraints": "1 <= coins.length <= 12\n1 <= coins[i] <= 2^31 - 1\n0 <= amount <= 10^4",
+    "examples": [
+      {
+        "input": "coins = [1,2,5], amount = 11",
+        "output": "3",
+        "explanation": "11 = 5 + 5 + 1, which requires 3 coins."
+      },
+      {
+        "input": "coins = [2], amount = 3",
+        "output": "-1",
+        "explanation": "It is impossible to make amount 3 with only coin denomination 2."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "coins = [1,2,5]\namount = 11",
+        "expectedOutput": "3"
+      },
+      {
+        "input": "coins = [2]\namount = 3",
+        "expectedOutput": "-1"
+      },
+      {
+        "input": "coins = [1]\namount = 0",
+        "expectedOutput": "0"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def coinChange(self, coins: list[int], amount: int) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {number[]} coins\n * @param {number} amount\n * @return {number}\n */\nvar coinChange = function(coins, amount) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int coinChange(int[] coins, int amount) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    int coinChange(vector<int>& coins, int amount) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Longest Increasing Subsequence",
+    "description": "Given an integer array nums, return the length of the longest strictly increasing subsequence.",
+    "difficulty": "Hard",
+    "topic": "Dynamic Programming",
+    "companies": [
+      "Google",
+      "Microsoft"
+    ],
+    "tags": [
+      "Dynamic Programming",
+      "Memoization",
+      "Binary Search"
+    ],
+    "constraints": "1 <= nums.length <= 2500\n-10^4 <= nums[i] <= 10^4",
+    "examples": [
+      {
+        "input": "nums = [10,9,2,5,3,7,101,18]",
+        "output": "4",
+        "explanation": "The longest increasing subsequence is [2,3,7,101], therefore the length is 4."
+      },
+      {
+        "input": "nums = [0,1,0,3,2,3]",
+        "output": "4",
+        "explanation": "The longest increasing subsequence is [0,1,2,3], therefore the length is 4."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "nums = [10,9,2,5,3,7,101,18]",
+        "expectedOutput": "4"
+      },
+      {
+        "input": "nums = [0,1,0,3,2,3]",
+        "expectedOutput": "4"
+      },
+      {
+        "input": "nums = [7,7,7,7,7,7,7]",
+        "expectedOutput": "1"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def lengthOfLIS(self, nums: list[int]) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar lengthOfLIS = function(nums) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int lengthOfLIS(int[] nums) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    int lengthOfLIS(vector<int>& nums) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Merge Sort an Array",
+    "description": "Given an array of integers nums, sort the array in ascending order using the merge sort algorithm and return it.",
+    "difficulty": "Medium",
+    "topic": "Sorting",
+    "companies": [
+      "Any",
+      "Microsoft"
+    ],
+    "tags": [
+      "Array",
+      "Sorting",
+      "Divide and Conquer",
+      "Recursion"
+    ],
+    "constraints": "1 <= nums.length <= 5 * 10^4\n-5 * 10^4 <= nums[i] <= 5 * 10^4",
+    "examples": [
+      {
+        "input": "nums = [5,2,3,1]",
+        "output": "[1,2,3,5]",
+        "explanation": "After sorting using merge sort, the array becomes [1,2,3,5]."
+      },
+      {
+        "input": "nums = [5,1,1,2,0,0]",
+        "output": "[0,0,1,1,2,5]",
+        "explanation": "After sorting using merge sort, the array becomes [0,0,1,1,2,5]."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "nums = [5,2,3,1]",
+        "expectedOutput": "[1,2,3,5]"
+      },
+      {
+        "input": "nums = [5,1,1,2,0,0]",
+        "expectedOutput": "[0,0,1,1,2,5]"
+      },
+      {
+        "input": "nums = [1]",
+        "expectedOutput": "[1]"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def sortArray(self, nums: list[int]) -> list[int]:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar sortArray = function(nums) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int[] sortArray(int[] nums) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    vector<int> sortArray(vector<int>& nums) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Search in Rotated Sorted Array",
+    "description": "There is an integer array nums sorted in ascending order (with distinct values). Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k. Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums. You must write an algorithm with O(log n) runtime complexity.",
+    "difficulty": "Medium",
+    "topic": "Sorting",
+    "companies": [
+      "Google",
+      "Amazon",
+      "Meta"
+    ],
+    "tags": [
+      "Array",
+      "Binary Search"
+    ],
+    "constraints": "1 <= nums.length <= 5000\n-10^4 <= nums[i] <= 10^4\nAll values of nums are unique.\nnums is an ascending array that is possibly rotated.\n-10^4 <= target <= 10^4",
+    "examples": [
+      {
+        "input": "nums = [4,5,6,7,0,1,2], target = 0",
+        "output": "4",
+        "explanation": "The target 0 is found at index 4."
+      },
+      {
+        "input": "nums = [4,5,6,7,0,1,2], target = 3",
+        "output": "-1",
+        "explanation": "The target 3 is not in the array."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "nums = [4,5,6,7,0,1,2]\ntarget = 0",
+        "expectedOutput": "4"
+      },
+      {
+        "input": "nums = [4,5,6,7,0,1,2]\ntarget = 3",
+        "expectedOutput": "-1"
+      },
+      {
+        "input": "nums = [1]\ntarget = 0",
+        "expectedOutput": "-1"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def search(self, nums: list[int], target: int) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar search = function(nums, target) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public int search(int[] nums, int target) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Subsets",
+    "description": "Given an integer array nums of unique elements, return all possible subsets (the power set). The solution set must not contain duplicate subsets. Return the solution in any order.",
+    "difficulty": "Medium",
+    "topic": "Recursion",
+    "companies": [
+      "Google",
+      "Meta"
+    ],
+    "tags": [
+      "Array",
+      "Recursion",
+      "Backtracking",
+      "Bit Manipulation"
+    ],
+    "constraints": "1 <= nums.length <= 10\n-10 <= nums[i] <= 10\nAll the numbers of nums are unique.",
+    "examples": [
+      {
+        "input": "nums = [1,2,3]",
+        "output": "[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]",
+        "explanation": "All possible subsets of [1,2,3] are listed."
+      },
+      {
+        "input": "nums = [0]",
+        "output": "[[],[0]]",
+        "explanation": "The only subsets of [0] are the empty set and [0] itself."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "nums = [1,2,3]",
+        "expectedOutput": "[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]"
+      },
+      {
+        "input": "nums = [0]",
+        "expectedOutput": "[[],[0]]"
+      },
+      {
+        "input": "nums = [1,2]",
+        "expectedOutput": "[[],[1],[2],[1,2]]"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def subsets(self, nums: list[int]) -> list[list[int]]:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar subsets = function(nums) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public List<List<Integer>> subsets(int[] nums) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    vector<vector<int>> subsets(vector<int>& nums) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  },
+  {
+    "title": "Word Search",
+    "description": "Given an m x n grid of characters board and a string word, return true if word exists in the grid. The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.",
+    "difficulty": "Hard",
+    "topic": "Recursion",
+    "companies": [
+      "Google",
+      "Amazon",
+      "Microsoft"
+    ],
+    "tags": [
+      "Array",
+      "Recursion",
+      "Backtracking",
+      "DFS"
+    ],
+    "constraints": "m == board.length\nn = board[i].length\n1 <= m, n <= 6\n1 <= word.length <= 15\nboard and word consists of only lowercase and uppercase English letters.",
+    "examples": [
+      {
+        "input": "board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]], word = \"ABCCED\"",
+        "output": "true",
+        "explanation": "The word ABCCED can be traced through the grid following adjacent cells."
+      },
+      {
+        "input": "board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]], word = \"ABCB\"",
+        "output": "false",
+        "explanation": "The word ABCB cannot be formed without reusing the cell B."
+      }
+    ],
+    "testCases": [
+      {
+        "input": "board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]\nword = \"ABCCED\"",
+        "expectedOutput": "true"
+      },
+      {
+        "input": "board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]\nword = \"SEE\"",
+        "expectedOutput": "true"
+      },
+      {
+        "input": "board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]\nword = \"ABCB\"",
+        "expectedOutput": "false"
+      }
+    ],
+    "starterCode": {
+      "python": "class Solution:\n    def exist(self, board: list[list[str]], word: str) -> bool:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * @param {character[][]} board\n * @param {string} word\n * @return {boolean}\n */\nvar exist = function(board, word) {\n    // Write your solution here\n};",
+      "java": "class Solution {\n    public boolean exist(char[][] board, String word) {\n        // Write your solution here\n    }\n}",
+      "cpp": "class Solution {\npublic:\n    bool exist(vector<vector<char>>& board, string word) {\n        // Write your solution here\n    }\n};"
+    },
+    "judgeHarness": {
+      "python": ""
+    },
+    "timeLimit": 1800
+  }
+]
