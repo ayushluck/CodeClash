@@ -46,7 +46,10 @@
       "cpp": "class Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -98,7 +101,10 @@
       "cpp": "class Solution {\npublic:\n    int maxProfit(vector<int>& prices) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -151,7 +157,10 @@
       "cpp": "class Solution {\npublic:\n    int maxSubArray(vector<int>& nums) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -202,7 +211,10 @@
       "cpp": "class Solution {\npublic:\n    vector<int> productExceptSelf(vector<int>& nums) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -256,7 +268,10 @@
       "cpp": "class Solution {\npublic:\n    int trap(vector<int>& height) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -308,7 +323,10 @@
       "cpp": "class Solution {\npublic:\n    bool isAnagram(string& s, string& t) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -362,7 +380,10 @@
       "cpp": "class Solution {\npublic:\n    int lengthOfLongestSubstring(string& s) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -415,7 +436,10 @@
       "cpp": "class Solution {\npublic:\n    string minWindow(string& s, string& t) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -461,13 +485,16 @@
       }
     ],
     "starterCode": {
-      "python": "class Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        # Write your solution here\n        pass",
-      "javascript": "/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar reverseList = function(head) {\n    // Write your solution here\n};",
-      "java": "class Solution {\n    public ListNode reverseList(ListNode head) {\n        // Write your solution here\n    }\n}",
-      "cpp": "class Solution {\npublic:\n    ListNode* reverseList(ListNode* head) {\n        // Write your solution here\n    }\n};"
+      "python": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val);\n *     this.next = (next===undefined ? null : next);\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar reverseList = function(head) {\n    // Write your solution here\n};",
+      "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode reverseList(ListNode head) {\n        // Write your solution here\n    }\n}",
+      "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* reverseList(ListNode* head) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef buildLinkedList(arr, pos=-1):\n    if not arr: return None\n    nodes = [ListNode(v) for v in arr]\n    for i in range(len(nodes)-1):\n        nodes[i].next = nodes[i+1]\n    if pos >= 0:\n        nodes[-1].next = nodes[pos]\n    return nodes[0]"
+      "python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef buildLinkedList(arr, pos=-1):\n    if not arr: return None\n    nodes = [ListNode(v) for v in arr]\n    for i in range(len(nodes)-1):\n        nodes[i].next = nodes[i+1]\n    if pos >= 0:\n        nodes[-1].next = nodes[pos]\n    return nodes[0]\n",
+      "javascript": "class ListNode {\n  constructor(val = 0, next = null) {\n    this.val = val;\n    this.next = next;\n  }\n}\nfunction buildLinkedList(arr, pos = -1) {\n  if (!arr.length) return null;\n  const nodes = arr.map(v => new ListNode(v));\n  for (let i = 0; i < nodes.length - 1; i++) nodes[i].next = nodes[i+1];\n  if (pos >= 0) nodes[nodes.length-1].next = nodes[pos];\n  return nodes[0];\n}",
+      "java": "public class ListNode {\n  int val;\n  ListNode next;\n  ListNode(int val) { this.val = val; }\n}\npublic static ListNode buildLinkedList(int[] arr, int pos) {\n  if (arr.length == 0) return null;\n  ListNode[] nodes = new ListNode[arr.length];\n  for (int i = 0; i < arr.length; i++) nodes[i] = new ListNode(arr[i]);\n  for (int i = 0; i < arr.length - 1; i++) nodes[i].next = nodes[i+1];\n  if (pos >= 0) nodes[arr.length-1].next = nodes[pos];\n  return nodes[0];\n}",
+      "cpp": "struct ListNode {\n  int val;\n  ListNode* next;\n  ListNode(int val) : val(val), next(nullptr) {}\n};\nListNode* buildLinkedList(vector<int>& arr, int pos = -1) {\n  if (arr.empty()) return nullptr;\n  vector<ListNode*> nodes;\n  for (int v : arr) nodes.push_back(new ListNode(v));\n  for (int i = 0; i < nodes.size()-1; i++) nodes[i]->next = nodes[i+1];\n  if (pos >= 0) nodes.back()->next = nodes[pos];\n  return nodes[0];\n}"
     },
     "timeLimit": 1800
   },
@@ -513,13 +540,16 @@
       }
     ],
     "starterCode": {
-      "python": "class Solution:\n    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:\n        # Write your solution here\n        pass",
-      "javascript": "/**\n * @param {ListNode} list1\n * @param {ListNode} list2\n * @return {ListNode}\n */\nvar mergeTwoLists = function(list1, list2) {\n    // Write your solution here\n};",
-      "java": "class Solution {\n    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {\n        // Write your solution here\n    }\n}",
-      "cpp": "class Solution {\npublic:\n    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {\n        // Write your solution here\n    }\n};"
+      "python": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val);\n *     this.next = (next===undefined ? null : next);\n * }\n */\n/**\n * @param {ListNode} list1\n * @param {ListNode} list2\n * @return {ListNode}\n */\nvar mergeTwoLists = function(list1, list2) {\n    // Write your solution here\n};",
+      "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {\n        // Write your solution here\n    }\n}",
+      "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef buildLinkedList(arr, pos=-1):\n    if not arr: return None\n    nodes = [ListNode(v) for v in arr]\n    for i in range(len(nodes)-1):\n        nodes[i].next = nodes[i+1]\n    if pos >= 0:\n        nodes[-1].next = nodes[pos]\n    return nodes[0]"
+      "python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef buildLinkedList(arr, pos=-1):\n    if not arr: return None\n    nodes = [ListNode(v) for v in arr]\n    for i in range(len(nodes)-1):\n        nodes[i].next = nodes[i+1]\n    if pos >= 0:\n        nodes[-1].next = nodes[pos]\n    return nodes[0]\n",
+      "javascript": "class ListNode {\n  constructor(val = 0, next = null) {\n    this.val = val;\n    this.next = next;\n  }\n}\nfunction buildLinkedList(arr, pos = -1) {\n  if (!arr.length) return null;\n  const nodes = arr.map(v => new ListNode(v));\n  for (let i = 0; i < nodes.length - 1; i++) nodes[i].next = nodes[i+1];\n  if (pos >= 0) nodes[nodes.length-1].next = nodes[pos];\n  return nodes[0];\n}",
+      "java": "public class ListNode {\n  int val;\n  ListNode next;\n  ListNode(int val) { this.val = val; }\n}\npublic static ListNode buildLinkedList(int[] arr, int pos) {\n  if (arr.length == 0) return null;\n  ListNode[] nodes = new ListNode[arr.length];\n  for (int i = 0; i < arr.length; i++) nodes[i] = new ListNode(arr[i]);\n  for (int i = 0; i < arr.length - 1; i++) nodes[i].next = nodes[i+1];\n  if (pos >= 0) nodes[arr.length-1].next = nodes[pos];\n  return nodes[0];\n}",
+      "cpp": "struct ListNode {\n  int val;\n  ListNode* next;\n  ListNode(int val) : val(val), next(nullptr) {}\n};\nListNode* buildLinkedList(vector<int>& arr, int pos = -1) {\n  if (arr.empty()) return nullptr;\n  vector<ListNode*> nodes;\n  for (int v : arr) nodes.push_back(new ListNode(v));\n  for (int i = 0; i < nodes.size()-1; i++) nodes[i]->next = nodes[i+1];\n  if (pos >= 0) nodes.back()->next = nodes[pos];\n  return nodes[0];\n}"
     },
     "timeLimit": 1800
   },
@@ -565,13 +595,16 @@
       }
     ],
     "starterCode": {
-      "python": "class Solution:\n    def hasCycle(self, head: Optional[ListNode]) -> bool:\n        # Write your solution here\n        pass",
-      "javascript": "/**\n * @param {ListNode} head\n * @return {boolean}\n */\nvar hasCycle = function(head) {\n    // Write your solution here\n};",
-      "java": "class Solution {\n    public boolean hasCycle(ListNode head) {\n        // Write your solution here\n    }\n}",
-      "cpp": "class Solution {\npublic:\n    bool hasCycle(ListNode* head) {\n        // Write your solution here\n    }\n};"
+      "python": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def hasCycle(self, head: Optional[ListNode]) -> bool:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val);\n *     this.next = (next===undefined ? null : next);\n * }\n */\n/**\n * @param {ListNode} head\n * @return {boolean}\n */\nvar hasCycle = function(head) {\n    // Write your solution here\n};",
+      "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public boolean hasCycle(ListNode head) {\n        // Write your solution here\n    }\n}",
+      "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    bool hasCycle(ListNode* head) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef buildLinkedList(arr, pos=-1):\n    if not arr: return None\n    nodes = [ListNode(v) for v in arr]\n    for i in range(len(nodes)-1):\n        nodes[i].next = nodes[i+1]\n    if pos >= 0:\n        nodes[-1].next = nodes[pos]\n    return nodes[0]"
+      "python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef buildLinkedList(arr, pos=-1):\n    if not arr: return None\n    nodes = [ListNode(v) for v in arr]\n    for i in range(len(nodes)-1):\n        nodes[i].next = nodes[i+1]\n    if pos >= 0:\n        nodes[-1].next = nodes[pos]\n    return nodes[0]\n",
+      "javascript": "class ListNode {\n  constructor(val = 0, next = null) {\n    this.val = val;\n    this.next = next;\n  }\n}\nfunction buildLinkedList(arr, pos = -1) {\n  if (!arr.length) return null;\n  const nodes = arr.map(v => new ListNode(v));\n  for (let i = 0; i < nodes.length - 1; i++) nodes[i].next = nodes[i+1];\n  if (pos >= 0) nodes[nodes.length-1].next = nodes[pos];\n  return nodes[0];\n}",
+      "java": "public class ListNode {\n  int val;\n  ListNode next;\n  ListNode(int val) { this.val = val; }\n}\npublic static ListNode buildLinkedList(int[] arr, int pos) {\n  if (arr.length == 0) return null;\n  ListNode[] nodes = new ListNode[arr.length];\n  for (int i = 0; i < arr.length; i++) nodes[i] = new ListNode(arr[i]);\n  for (int i = 0; i < arr.length - 1; i++) nodes[i].next = nodes[i+1];\n  if (pos >= 0) nodes[arr.length-1].next = nodes[pos];\n  return nodes[0];\n}",
+      "cpp": "struct ListNode {\n  int val;\n  ListNode* next;\n  ListNode(int val) : val(val), next(nullptr) {}\n};\nListNode* buildLinkedList(vector<int>& arr, int pos = -1) {\n  if (arr.empty()) return nullptr;\n  vector<ListNode*> nodes;\n  for (int v : arr) nodes.push_back(new ListNode(v));\n  for (int i = 0; i < nodes.size()-1; i++) nodes[i]->next = nodes[i+1];\n  if (pos >= 0) nodes.back()->next = nodes[pos];\n  return nodes[0];\n}"
     },
     "timeLimit": 1800
   },
@@ -618,13 +651,16 @@
       }
     ],
     "starterCode": {
-      "python": "class Solution:\n    def maxDepth(self, root: Optional[TreeNode]) -> int:\n        # Write your solution here\n        pass",
-      "javascript": "/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar maxDepth = function(root) {\n    // Write your solution here\n};",
-      "java": "class Solution {\n    public int maxDepth(TreeNode root) {\n        // Write your solution here\n    }\n}",
-      "cpp": "class Solution {\npublic:\n    int maxDepth(TreeNode* root) {\n        // Write your solution here\n    }\n};"
+      "python": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def maxDepth(self, root: Optional[TreeNode]) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val);\n *     this.left = (left===undefined ? null : left);\n *     this.right = (right===undefined ? null : right);\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar maxDepth = function(root) {\n    // Write your solution here\n};",
+      "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public int maxDepth(TreeNode root) {\n        // Write your solution here\n    }\n}",
+      "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int maxDepth(TreeNode* root) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(arr):\n    if not arr: return None\n    root = TreeNode(arr[0])\n    queue = [root]\n    i = 1\n    while queue and i < len(arr):\n        node = queue.pop(0)\n        if i < len(arr) and arr[i] is not None:\n            node.left = TreeNode(arr[i])\n            queue.append(node.left)\n        i += 1\n        if i < len(arr) and arr[i] is not None:\n            node.right = TreeNode(arr[i])\n            queue.append(node.right)\n        i += 1\n    return root"
+      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(arr):\n    if not arr: return None\n    root = TreeNode(arr[0])\n    queue = [root]\n    i = 1\n    while queue and i < len(arr):\n        node = queue.pop(0)\n        if i < len(arr) and arr[i] is not None:\n            node.left = TreeNode(arr[i])\n            queue.append(node.left)\n        i += 1\n        if i < len(arr) and arr[i] is not None:\n            node.right = TreeNode(arr[i])\n            queue.append(node.right)\n        i += 1\n    return root\n",
+      "javascript": "class TreeNode {\n  constructor(val = 0, left = null, right = null) {\n    this.val = val;\n    this.left = left;\n    this.right = right;\n  }\n}\nfunction buildTree(arr) {\n  if (!arr.length) return null;\n  const root = new TreeNode(arr[0]);\n  const queue = [root];\n  let i = 1;\n  while (queue.length && i < arr.length) {\n    const node = queue.shift();\n    if (i < arr.length && arr[i] !== null) { node.left = new TreeNode(arr[i]); queue.push(node.left); }\n    i++;\n    if (i < arr.length && arr[i] !== null) { node.right = new TreeNode(arr[i]); queue.push(node.right); }\n    i++;\n  }\n  return root;\n}",
+      "java": "public class TreeNode {\n  int val;\n  TreeNode left, right;\n  TreeNode(int val) { this.val = val; }\n}\npublic static TreeNode buildTree(Integer[] arr) {\n  if (arr.length == 0) return null;\n  TreeNode root = new TreeNode(arr[0]);\n  Queue<TreeNode> queue = new LinkedList<>();\n  queue.add(root);\n  int i = 1;\n  while (!queue.isEmpty() && i < arr.length) {\n    TreeNode node = queue.poll();\n    if (i < arr.length && arr[i] != null) { node.left = new TreeNode(arr[i]); queue.add(node.left); }\n    i++;\n    if (i < arr.length && arr[i] != null) { node.right = new TreeNode(arr[i]); queue.add(node.right); }\n    i++;\n  }\n  return root;\n}",
+      "cpp": "struct TreeNode {\n  int val;\n  TreeNode* left;\n  TreeNode* right;\n  TreeNode(int val) : val(val), left(nullptr), right(nullptr) {}\n};\nTreeNode* buildTree(vector<int*>& arr) {\n  if (arr.empty()) return nullptr;\n  TreeNode* root = new TreeNode(*arr[0]);\n  queue<TreeNode*> q;\n  q.push(root);\n  int i = 1;\n  while (!q.empty() && i < arr.size()) {\n    TreeNode* node = q.front(); q.pop();\n    if (i < arr.size() && arr[i]) { node->left = new TreeNode(*arr[i]); q.push(node->left); }\n    i++;\n    if (i < arr.size() && arr[i]) { node->right = new TreeNode(*arr[i]); q.push(node->right); }\n    i++;\n  }\n  return root;\n}"
     },
     "timeLimit": 1800
   },
@@ -671,13 +707,16 @@
       }
     ],
     "starterCode": {
-      "python": "class Solution:\n    def isValidBST(self, root: Optional[TreeNode]) -> bool:\n        # Write your solution here\n        pass",
-      "javascript": "/**\n * @param {TreeNode} root\n * @return {boolean}\n */\nvar isValidBST = function(root) {\n    // Write your solution here\n};",
-      "java": "class Solution {\n    public boolean isValidBST(TreeNode root) {\n        // Write your solution here\n    }\n}",
-      "cpp": "class Solution {\npublic:\n    bool isValidBST(TreeNode* root) {\n        // Write your solution here\n    }\n};"
+      "python": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def isValidBST(self, root: Optional[TreeNode]) -> bool:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val);\n *     this.left = (left===undefined ? null : left);\n *     this.right = (right===undefined ? null : right);\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {boolean}\n */\nvar isValidBST = function(root) {\n    // Write your solution here\n};",
+      "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public boolean isValidBST(TreeNode root) {\n        // Write your solution here\n    }\n}",
+      "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    bool isValidBST(TreeNode* root) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(arr):\n    if not arr: return None\n    root = TreeNode(arr[0])\n    queue = [root]\n    i = 1\n    while queue and i < len(arr):\n        node = queue.pop(0)\n        if i < len(arr) and arr[i] is not None:\n            node.left = TreeNode(arr[i])\n            queue.append(node.left)\n        i += 1\n        if i < len(arr) and arr[i] is not None:\n            node.right = TreeNode(arr[i])\n            queue.append(node.right)\n        i += 1\n    return root"
+      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(arr):\n    if not arr: return None\n    root = TreeNode(arr[0])\n    queue = [root]\n    i = 1\n    while queue and i < len(arr):\n        node = queue.pop(0)\n        if i < len(arr) and arr[i] is not None:\n            node.left = TreeNode(arr[i])\n            queue.append(node.left)\n        i += 1\n        if i < len(arr) and arr[i] is not None:\n            node.right = TreeNode(arr[i])\n            queue.append(node.right)\n        i += 1\n    return root\n",
+      "javascript": "class TreeNode {\n  constructor(val = 0, left = null, right = null) {\n    this.val = val;\n    this.left = left;\n    this.right = right;\n  }\n}\nfunction buildTree(arr) {\n  if (!arr.length) return null;\n  const root = new TreeNode(arr[0]);\n  const queue = [root];\n  let i = 1;\n  while (queue.length && i < arr.length) {\n    const node = queue.shift();\n    if (i < arr.length && arr[i] !== null) { node.left = new TreeNode(arr[i]); queue.push(node.left); }\n    i++;\n    if (i < arr.length && arr[i] !== null) { node.right = new TreeNode(arr[i]); queue.push(node.right); }\n    i++;\n  }\n  return root;\n}",
+      "java": "public class TreeNode {\n  int val;\n  TreeNode left, right;\n  TreeNode(int val) { this.val = val; }\n}\npublic static TreeNode buildTree(Integer[] arr) {\n  if (arr.length == 0) return null;\n  TreeNode root = new TreeNode(arr[0]);\n  Queue<TreeNode> queue = new LinkedList<>();\n  queue.add(root);\n  int i = 1;\n  while (!queue.isEmpty() && i < arr.length) {\n    TreeNode node = queue.poll();\n    if (i < arr.length && arr[i] != null) { node.left = new TreeNode(arr[i]); queue.add(node.left); }\n    i++;\n    if (i < arr.length && arr[i] != null) { node.right = new TreeNode(arr[i]); queue.add(node.right); }\n    i++;\n  }\n  return root;\n}",
+      "cpp": "struct TreeNode {\n  int val;\n  TreeNode* left;\n  TreeNode* right;\n  TreeNode(int val) : val(val), left(nullptr), right(nullptr) {}\n};\nTreeNode* buildTree(vector<int*>& arr) {\n  if (arr.empty()) return nullptr;\n  TreeNode* root = new TreeNode(*arr[0]);\n  queue<TreeNode*> q;\n  q.push(root);\n  int i = 1;\n  while (!q.empty() && i < arr.size()) {\n    TreeNode* node = q.front(); q.pop();\n    if (i < arr.size() && arr[i]) { node->left = new TreeNode(*arr[i]); q.push(node->left); }\n    i++;\n    if (i < arr.size() && arr[i]) { node->right = new TreeNode(*arr[i]); q.push(node->right); }\n    i++;\n  }\n  return root;\n}"
     },
     "timeLimit": 1800
   },
@@ -723,13 +762,16 @@
       }
     ],
     "starterCode": {
-      "python": "class Solution:\n    def levelOrder(self, root: Optional[TreeNode]) -> list[list[int]]:\n        # Write your solution here\n        pass",
-      "javascript": "/**\n * @param {TreeNode} root\n * @return {number[][]}\n */\nvar levelOrder = function(root) {\n    // Write your solution here\n};",
-      "java": "class Solution {\n    public List<List<Integer>> levelOrder(TreeNode root) {\n        // Write your solution here\n    }\n}",
-      "cpp": "class Solution {\npublic:\n    vector<vector<int>> levelOrder(TreeNode* root) {\n        // Write your solution here\n    }\n};"
+      "python": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def levelOrder(self, root: Optional[TreeNode]) -> list[list[int]]:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val);\n *     this.left = (left===undefined ? null : left);\n *     this.right = (right===undefined ? null : right);\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[][]}\n */\nvar levelOrder = function(root) {\n    // Write your solution here\n};",
+      "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public List<List<Integer>> levelOrder(TreeNode root) {\n        // Write your solution here\n    }\n}",
+      "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<vector<int>> levelOrder(TreeNode* root) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(arr):\n    if not arr: return None\n    root = TreeNode(arr[0])\n    queue = [root]\n    i = 1\n    while queue and i < len(arr):\n        node = queue.pop(0)\n        if i < len(arr) and arr[i] is not None:\n            node.left = TreeNode(arr[i])\n            queue.append(node.left)\n        i += 1\n        if i < len(arr) and arr[i] is not None:\n            node.right = TreeNode(arr[i])\n            queue.append(node.right)\n        i += 1\n    return root"
+      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(arr):\n    if not arr: return None\n    root = TreeNode(arr[0])\n    queue = [root]\n    i = 1\n    while queue and i < len(arr):\n        node = queue.pop(0)\n        if i < len(arr) and arr[i] is not None:\n            node.left = TreeNode(arr[i])\n            queue.append(node.left)\n        i += 1\n        if i < len(arr) and arr[i] is not None:\n            node.right = TreeNode(arr[i])\n            queue.append(node.right)\n        i += 1\n    return root\n",
+      "javascript": "class TreeNode {\n  constructor(val = 0, left = null, right = null) {\n    this.val = val;\n    this.left = left;\n    this.right = right;\n  }\n}\nfunction buildTree(arr) {\n  if (!arr.length) return null;\n  const root = new TreeNode(arr[0]);\n  const queue = [root];\n  let i = 1;\n  while (queue.length && i < arr.length) {\n    const node = queue.shift();\n    if (i < arr.length && arr[i] !== null) { node.left = new TreeNode(arr[i]); queue.push(node.left); }\n    i++;\n    if (i < arr.length && arr[i] !== null) { node.right = new TreeNode(arr[i]); queue.push(node.right); }\n    i++;\n  }\n  return root;\n}",
+      "java": "public class TreeNode {\n  int val;\n  TreeNode left, right;\n  TreeNode(int val) { this.val = val; }\n}\npublic static TreeNode buildTree(Integer[] arr) {\n  if (arr.length == 0) return null;\n  TreeNode root = new TreeNode(arr[0]);\n  Queue<TreeNode> queue = new LinkedList<>();\n  queue.add(root);\n  int i = 1;\n  while (!queue.isEmpty() && i < arr.length) {\n    TreeNode node = queue.poll();\n    if (i < arr.length && arr[i] != null) { node.left = new TreeNode(arr[i]); queue.add(node.left); }\n    i++;\n    if (i < arr.length && arr[i] != null) { node.right = new TreeNode(arr[i]); queue.add(node.right); }\n    i++;\n  }\n  return root;\n}",
+      "cpp": "struct TreeNode {\n  int val;\n  TreeNode* left;\n  TreeNode* right;\n  TreeNode(int val) : val(val), left(nullptr), right(nullptr) {}\n};\nTreeNode* buildTree(vector<int*>& arr) {\n  if (arr.empty()) return nullptr;\n  TreeNode* root = new TreeNode(*arr[0]);\n  queue<TreeNode*> q;\n  q.push(root);\n  int i = 1;\n  while (!q.empty() && i < arr.size()) {\n    TreeNode* node = q.front(); q.pop();\n    if (i < arr.size() && arr[i]) { node->left = new TreeNode(*arr[i]); q.push(node->left); }\n    i++;\n    if (i < arr.size() && arr[i]) { node->right = new TreeNode(*arr[i]); q.push(node->right); }\n    i++;\n  }\n  return root;\n}"
     },
     "timeLimit": 1800
   },
@@ -776,13 +818,16 @@
       }
     ],
     "starterCode": {
-      "python": "class Solution:\n    def maxPathSum(self, root: Optional[TreeNode]) -> int:\n        # Write your solution here\n        pass",
-      "javascript": "/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar maxPathSum = function(root) {\n    // Write your solution here\n};",
-      "java": "class Solution {\n    public int maxPathSum(TreeNode root) {\n        // Write your solution here\n    }\n}",
-      "cpp": "class Solution {\npublic:\n    int maxPathSum(TreeNode* root) {\n        // Write your solution here\n    }\n};"
+      "python": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def maxPathSum(self, root: Optional[TreeNode]) -> int:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val);\n *     this.left = (left===undefined ? null : left);\n *     this.right = (right===undefined ? null : right);\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar maxPathSum = function(root) {\n    // Write your solution here\n};",
+      "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public int maxPathSum(TreeNode root) {\n        // Write your solution here\n    }\n}",
+      "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int maxPathSum(TreeNode* root) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(arr):\n    if not arr: return None\n    root = TreeNode(arr[0])\n    queue = [root]\n    i = 1\n    while queue and i < len(arr):\n        node = queue.pop(0)\n        if i < len(arr) and arr[i] is not None:\n            node.left = TreeNode(arr[i])\n            queue.append(node.left)\n        i += 1\n        if i < len(arr) and arr[i] is not None:\n            node.right = TreeNode(arr[i])\n            queue.append(node.right)\n        i += 1\n    return root"
+      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef buildTree(arr):\n    if not arr: return None\n    root = TreeNode(arr[0])\n    queue = [root]\n    i = 1\n    while queue and i < len(arr):\n        node = queue.pop(0)\n        if i < len(arr) and arr[i] is not None:\n            node.left = TreeNode(arr[i])\n            queue.append(node.left)\n        i += 1\n        if i < len(arr) and arr[i] is not None:\n            node.right = TreeNode(arr[i])\n            queue.append(node.right)\n        i += 1\n    return root\n",
+      "javascript": "class TreeNode {\n  constructor(val = 0, left = null, right = null) {\n    this.val = val;\n    this.left = left;\n    this.right = right;\n  }\n}\nfunction buildTree(arr) {\n  if (!arr.length) return null;\n  const root = new TreeNode(arr[0]);\n  const queue = [root];\n  let i = 1;\n  while (queue.length && i < arr.length) {\n    const node = queue.shift();\n    if (i < arr.length && arr[i] !== null) { node.left = new TreeNode(arr[i]); queue.push(node.left); }\n    i++;\n    if (i < arr.length && arr[i] !== null) { node.right = new TreeNode(arr[i]); queue.push(node.right); }\n    i++;\n  }\n  return root;\n}",
+      "java": "public class TreeNode {\n  int val;\n  TreeNode left, right;\n  TreeNode(int val) { this.val = val; }\n}\npublic static TreeNode buildTree(Integer[] arr) {\n  if (arr.length == 0) return null;\n  TreeNode root = new TreeNode(arr[0]);\n  Queue<TreeNode> queue = new LinkedList<>();\n  queue.add(root);\n  int i = 1;\n  while (!queue.isEmpty() && i < arr.length) {\n    TreeNode node = queue.poll();\n    if (i < arr.length && arr[i] != null) { node.left = new TreeNode(arr[i]); queue.add(node.left); }\n    i++;\n    if (i < arr.length && arr[i] != null) { node.right = new TreeNode(arr[i]); queue.add(node.right); }\n    i++;\n  }\n  return root;\n}",
+      "cpp": "struct TreeNode {\n  int val;\n  TreeNode* left;\n  TreeNode* right;\n  TreeNode(int val) : val(val), left(nullptr), right(nullptr) {}\n};\nTreeNode* buildTree(vector<int*>& arr) {\n  if (arr.empty()) return nullptr;\n  TreeNode* root = new TreeNode(*arr[0]);\n  queue<TreeNode*> q;\n  q.push(root);\n  int i = 1;\n  while (!q.empty() && i < arr.size()) {\n    TreeNode* node = q.front(); q.pop();\n    if (i < arr.size() && arr[i]) { node->left = new TreeNode(*arr[i]); q.push(node->left); }\n    i++;\n    if (i < arr.size() && arr[i]) { node->right = new TreeNode(*arr[i]); q.push(node->right); }\n    i++;\n  }\n  return root;\n}"
     },
     "timeLimit": 1800
   },
@@ -837,7 +882,10 @@
       "cpp": "class Solution {\npublic:\n    int numIslands(vector<vector<char>>& grid) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": "import json\n\ndef parseGrid(grid_str):\n    return json.loads(grid_str)"
+      "python": "import json\n\ndef parseGrid(grid_str):\n    return json.loads(grid_str)",
+      "javascript": "function buildAdjList(n, edges) {\n  const graph = Array.from({length: n}, () => []);\n  for (const [u, v] of edges) {\n    graph[u].push(v);\n    graph[v].push(u);\n  }\n  return graph;\n}",
+      "java": "public static List<List<Integer>> buildAdjList(int n, int[][] edges) {\n  List<List<Integer>> graph = new ArrayList<>();\n  for (int i = 0; i < n; i++) graph.add(new ArrayList<>());\n  for (int[] e : edges) {\n    graph.get(e[0]).add(e[1]);\n    graph.get(e[1]).add(e[0]);\n  }\n  return graph;\n}",
+      "cpp": "vector<vector<int>> buildAdjList(int n, vector<vector<int>>& edges) {\n  vector<vector<int>> graph(n);\n  for (auto& e : edges) {\n    graph[e[0]].push_back(e[1]);\n    graph[e[1]].push_back(e[0]);\n  }\n  return graph;\n}"
     },
     "timeLimit": 1800
   },
@@ -884,13 +932,16 @@
       }
     ],
     "starterCode": {
-      "python": "class Solution:\n    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:\n        # Write your solution here\n        pass",
-      "javascript": "/**\n * @param {Node} node\n * @return {Node}\n */\nvar cloneGraph = function(node) {\n    // Write your solution here\n};",
-      "java": "class Solution {\n    public Node cloneGraph(Node node) {\n        // Write your solution here\n    }\n}",
-      "cpp": "class Solution {\npublic:\n    Node* cloneGraph(Node* node) {\n        // Write your solution here\n    }\n};"
+      "python": "# Definition for a graph node.\n# class Node:\n#     def __init__(self, val=0, neighbors=None):\n#         self.val = val\n#         self.neighbors = neighbors if neighbors is not None else []\nclass Solution:\n    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:\n        # Write your solution here\n        pass",
+      "javascript": "/**\n * Definition for a graph node.\n * function Node(val, neighbors) {\n *     this.val = val === undefined ? 0 : val;\n *     this.neighbors = neighbors === undefined ? [] : neighbors;\n * }\n */\n/**\n * @param {Node} node\n * @return {Node}\n */\nvar cloneGraph = function(node) {\n    // Write your solution here\n};",
+      "java": "/**\n * Definition for a graph node.\n * class Node {\n *     public int val;\n *     public List<Node> neighbors;\n *     public Node() { val = 0; neighbors = new ArrayList<Node>(); }\n *     public Node(int _val) { val = _val; neighbors = new ArrayList<Node>(); }\n *     public Node(int _val, ArrayList<Node> _neighbors) { val = _val; neighbors = _neighbors; }\n * }\n */\nclass Solution {\n    public Node cloneGraph(Node node) {\n        // Write your solution here\n    }\n}",
+      "cpp": "/**\n * Definition for a graph node.\n * class Node {\n * public:\n *     int val;\n *     vector<Node*> neighbors;\n *     Node() : val(0), neighbors(vector<Node*>()) {}\n *     Node(int _val) : val(_val), neighbors(vector<Node*>()) {}\n *     Node(int _val, vector<Node*> _neighbors) : val(_val), neighbors(_neighbors) {}\n * };\n */\nclass Solution {\npublic:\n    Node* cloneGraph(Node* node) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": "from collections import defaultdict\n\nclass Node:\n    def __init__(self, val=0, neighbors=None):\n        self.val = val\n        self.neighbors = neighbors if neighbors is not None else []\n\ndef buildGraph(adjList):\n    if not adjList:\n        return None\n    nodes = {i+1: Node(i+1) for i in range(len(adjList))}\n    for i, neighbors in enumerate(adjList):\n        nodes[i+1].neighbors = [nodes[n] for n in neighbors]\n    return nodes[1]"
+      "python": "from collections import defaultdict\n\nclass Node:\n    def __init__(self, val=0, neighbors=None):\n        self.val = val\n        self.neighbors = neighbors if neighbors is not None else []\n\ndef buildGraph(adjList):\n    if not adjList:\n        return None\n    nodes = {i+1: Node(i+1) for i in range(len(adjList))}\n    for i, neighbors in enumerate(adjList):\n        nodes[i+1].neighbors = [nodes[n] for n in neighbors]\n    return nodes[1]",
+      "javascript": "function buildAdjList(n, edges) {\n  const graph = Array.from({length: n}, () => []);\n  for (const [u, v] of edges) {\n    graph[u].push(v);\n    graph[v].push(u);\n  }\n  return graph;\n}",
+      "java": "public static List<List<Integer>> buildAdjList(int n, int[][] edges) {\n  List<List<Integer>> graph = new ArrayList<>();\n  for (int i = 0; i < n; i++) graph.add(new ArrayList<>());\n  for (int[] e : edges) {\n    graph.get(e[0]).add(e[1]);\n    graph.get(e[1]).add(e[0]);\n  }\n  return graph;\n}",
+      "cpp": "vector<vector<int>> buildAdjList(int n, vector<vector<int>>& edges) {\n  vector<vector<int>> graph(n);\n  for (auto& e : edges) {\n    graph[e[0]].push_back(e[1]);\n    graph[e[1]].push_back(e[0]);\n  }\n  return graph;\n}"
     },
     "timeLimit": 1800
   },
@@ -943,7 +994,10 @@
       "cpp": "class Solution {\npublic:\n    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": "import json\nfrom collections import defaultdict\n\ndef buildAdjList(num_courses, prerequisites):\n    graph = defaultdict(list)\n    for course, prereq in prerequisites:\n        graph[prereq].append(course)\n    return graph\n\ndef parsePrerequisites(prereq_str):\n    return json.loads(prereq_str)"
+      "python": "import json\nfrom collections import defaultdict\n\ndef buildAdjList(num_courses, prerequisites):\n    graph = defaultdict(list)\n    for course, prereq in prerequisites:\n        graph[prereq].append(course)\n    return graph\n\ndef parsePrerequisites(prereq_str):\n    return json.loads(prereq_str)",
+      "javascript": "function buildAdjList(n, edges) {\n  const graph = Array.from({length: n}, () => []);\n  for (const [u, v] of edges) {\n    graph[u].push(v);\n    graph[v].push(u);\n  }\n  return graph;\n}",
+      "java": "public static List<List<Integer>> buildAdjList(int n, int[][] edges) {\n  List<List<Integer>> graph = new ArrayList<>();\n  for (int i = 0; i < n; i++) graph.add(new ArrayList<>());\n  for (int[] e : edges) {\n    graph.get(e[0]).add(e[1]);\n    graph.get(e[1]).add(e[0]);\n  }\n  return graph;\n}",
+      "cpp": "vector<vector<int>> buildAdjList(int n, vector<vector<int>>& edges) {\n  vector<vector<int>> graph(n);\n  for (auto& e : edges) {\n    graph[e[0]].push_back(e[1]);\n    graph[e[1]].push_back(e[0]);\n  }\n  return graph;\n}"
     },
     "timeLimit": 1800
   },
@@ -996,7 +1050,10 @@
       "cpp": "class Solution {\npublic:\n    int climbStairs(int n) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -1050,7 +1107,10 @@
       "cpp": "class Solution {\npublic:\n    int coinChange(vector<int>& coins, int amount) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -1102,7 +1162,10 @@
       "cpp": "class Solution {\npublic:\n    int lengthOfLIS(vector<int>& nums) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -1155,7 +1218,10 @@
       "cpp": "class Solution {\npublic:\n    vector<int> sortArray(vector<int>& nums) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -1207,7 +1273,10 @@
       "cpp": "class Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -1260,7 +1329,10 @@
       "cpp": "class Solution {\npublic:\n    vector<vector<int>> subsets(vector<int>& nums) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   },
@@ -1314,7 +1386,10 @@
       "cpp": "class Solution {\npublic:\n    bool exist(vector<vector<char>>& board, string word) {\n        // Write your solution here\n    }\n};"
     },
     "judgeHarness": {
-      "python": ""
+      "python": "",
+      "javascript": "",
+      "java": "",
+      "cpp": ""
     },
     "timeLimit": 1800
   }
