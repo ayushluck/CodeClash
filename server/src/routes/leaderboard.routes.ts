@@ -1,12 +1,10 @@
 import { Router } from 'express';
-import { getUserProfile, updateUserProfile } from '../controllers/user.controller';
+import { getLeaderboard } from '../controllers/user.controller';
 import { authenticate } from '../middleware/auth.middleware';
 
 const router = Router();
 
 router.use(authenticate);
-
-router.get('/:id', getUserProfile);
-router.patch('/:id', updateUserProfile);
+router.get('/', getLeaderboard);
 
 export default router;
