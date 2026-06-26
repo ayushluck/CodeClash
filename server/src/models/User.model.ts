@@ -14,5 +14,5 @@ const UserSchema = new Schema({
   followers:  [{ type: Schema.Types.ObjectId, ref: 'User' }],
   following:  [{ type: Schema.Types.ObjectId, ref: 'User' }],
 }, { timestamps: true });
-
-export default usersDB.model('User', UserSchema);
+// User.model.ts — change the last line to:
+export const UserModel = usersDB.model('User', UserSchema);
