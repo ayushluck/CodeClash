@@ -1,17 +1,16 @@
-import dotenv from 'dotenv'
-dotenv.config()
+import {ENV} from './lib/ENV'
 
 import http from 'http'
 import { Server } from 'socket.io'
 import app from './app'
 import { connectDB } from './config/db'
 
-const PORT = process.env.PORT || 5000
+const PORT = ENV.PORT;
 
 const server = http.createServer(app)
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: ENV.CLIENT_URL,
     methods: ['GET', 'POST']
   }
 })

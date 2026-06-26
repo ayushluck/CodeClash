@@ -1,13 +1,11 @@
-import mongoose from 'mongoose'
-import dotenv from 'dotenv'
-
-dotenv.config()
-export const usersDB = mongoose.createConnection(process.env.MONGODB_USERS_URI!)
-export const questionsDB = mongoose.createConnection(process.env.MONGODB_QUESTIONS_URI!)
+import mongoose from 'mongoose';
+import { ENV } from '../lib/ENV';
+export const usersDB = mongoose.createConnection(ENV.MONGODB_USERS_URI);
+export const questionsDB = mongoose.createConnection(ENV.MONGODB_QUESTIONS_URI);
 
 export const connectDB = async () => {
-  await usersDB.asPromise()
-  console.log('✅ Users DB connected')
-  await questionsDB.asPromise()
-  console.log('✅ Questions DB connected')
-}
+  usersDB.on('connected', () => console.log('✅ Users DB connected'));
+  usersDB.on('error', (err) => console.error('❌ Users DB error:', err));
+  questionsDB.on('connected', () => console.log('✅ Questions DB connected'));
+  questionsDB.on('error', (err) => console.error('❌ Questions DB error:', err));
+};
