@@ -1,4 +1,4 @@
-import Question from '../models/Question.model';
+import {QuestionModel} from '../models/Question.model';
 
 export interface QueueEntry {
     socketId: string;
@@ -57,9 +57,9 @@ class MatchmakingService {
             filter.companies = company;
         }
 
-        const questions = await Question.find(filter as any).lean();
+        const questions = await QuestionModel.find(filter as any).lean();
         if (!questions.length) {
-            const fallback = await Question.find({ topic, difficulty } as any).lean();
+            const fallback = await QuestionModel.find({ topic, difficulty } as any).lean();
             if (!fallback.length) throw new Error(`No questions found for ${topic} ${difficulty}`);
             return fallback[Math.floor(Math.random() * fallback.length)];
         }

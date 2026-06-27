@@ -1,6 +1,6 @@
 import { Response } from 'express';
 import { AuthRequest } from '../middleware/auth.middleware';
-import Question from '../models/Question.model';
+import {QuestionModel} from '../models/Question.model';
 
 // GET /api/questions?topic=Arrays&difficulty=Medium&company=Google
 export const getQuestions = async (req: AuthRequest, res: Response) => {
@@ -12,7 +12,7 @@ export const getQuestions = async (req: AuthRequest, res: Response) => {
     if (difficulty) filter.difficulty = difficulty;
     if (company && company !== 'Any') filter.companies = company;
 
-    const questions = await Question.find(filter)
+    const questions = await QuestionModel.find(filter)
       .select('-testCases -judgeHarness') // don't expose test cases to frontend
       .lean();
 
@@ -25,7 +25,7 @@ export const getQuestions = async (req: AuthRequest, res: Response) => {
 // GET /api/questions/:id
 export const getQuestion = async (req: AuthRequest, res: Response) => {
   try {
-    const question = await Question.findById(req.params.id)
+    const question = await QuestionModel.findById(req.params.id)
       .select('-judgeHarness')
       .lean();
       

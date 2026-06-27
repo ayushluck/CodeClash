@@ -36,4 +36,4 @@ const QuestionSchema = new Schema({
   timeLimit:    { type: Number, default: 1800 },
 });
 
-export default questionsDB.model('Question', QuestionSchema);
+export const QuestionModel = questionsDB.model('Question', QuestionSchema);
