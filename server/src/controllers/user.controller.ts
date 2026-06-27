@@ -87,3 +87,107 @@ export const getLeaderboard = async (req: AuthRequest, res: Response) => {
     res.status(500).json({ message: 'Server error' });
   }
 };
+// Follow a user
+export const followUser = async (req: AuthRequest, res: Response) => {
+  const { id, targetId } = req.params;
+
+  try {
+    if (id === targetId) {
+      return res.status(400).json({ message: 'You cannot follow yourself' });
+    }
+
+    const user = await UserModel.findById(id);
+    const target = await UserModel.findById(targetId);
+
+    if (!user || !target) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    if (user.following.includes(targetId as any)) {
+      return res.status(400).json({ message: 'Already following this user' });
+    }
+
+    await UserModel.findByIdAndUpdate(id, { $push: { following: targetId } });
+    await UserModel.findByIdAndUpdate(targetId, { $push: { followers: id } });
+
+    res.json({ message: 'Followed successfully' });
+  } catch (err) {
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+// Unfollow a user
+export const unfollowUser = async (req: AuthRequest, res: Response) => {
+  const { id, targetId } = req.params;
+
+  try {
+    if (id === targetId) {
+      return res.status(400).json({ message: 'You cannot unfollow yourself' });
+    }
+
+    const user = await UserModel.findById(id);
+    const target = await UserModel.findById(targetId);
+
+    if (!user || !target) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    if (!user.following.includes(targetId as any)) {
+      return res.status(400).json({ message: 'Not following this user' });
+    }
+
+    await UserModel.findByIdAndUpdate(id, { $pull: { following: targetId } });
+    await UserModel.findByIdAndUpdate(targetId, { $pull: { followers: id } });
+
+    res.json({ message: 'Unfollowed successfully' });
+  } catch (err) {
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+// Get friends list (mutual follows)
+export const getFriends = async (req: AuthRequest, res: Response) => {
+  try {
+    const user = await UserModel.findById(req.params.id)
+      .select('following followers')
+      .lean();
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    const followingStr = user.following.map((id: any) => id.toString());
+    const followersStr = user.followers.map((id: any) => id.toString());
+    const friendIds = followingStr.filter((id: string) => followersStr.includes(id));
+
+    const friends = await UserModel.find({ _id: { $in: friendIds } })
+      .select('username elo avatar wins losses streak')
+      .lean();
+
+    res.json({ friends });
+  } catch (err) {
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+// Search users by username
+export const searchUsers = async (req: AuthRequest, res: Response) => {
+  try {
+    const { username } = req.query;
+
+    if (!username || typeof username !== 'string') {
+      return res.status(400).json({ message: 'Username query required' });
+    }
+
+    const users = await UserModel.find({
+      username: { $regex: username, $options: 'i' }
+    })
+      .select('username elo avatar wins losses')
+      .limit(10)
+      .lean();
+
+    res.json({ users });
+  } catch (err) {
+    res.status(500).json({ message: 'Server error' });
+  }
+};
