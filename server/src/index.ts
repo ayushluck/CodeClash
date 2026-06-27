@@ -1,13 +1,14 @@
-import {ENV} from './lib/ENV'
-
+import { ENV } from './lib/ENV'
 import http from 'http'
 import { Server } from 'socket.io'
 import app from './app'
 import { connectDB } from './config/db'
+import { initSocket } from './socket'
 
 const PORT = ENV.PORT;
 
 const server = http.createServer(app)
+
 const io = new Server(server, {
   cors: {
     origin: ENV.CLIENT_URL,
@@ -15,10 +16,7 @@ const io = new Server(server, {
   }
 })
 
-io.on('connection', (socket) => {
-  console.log('Socket connected:', socket.id)
-  socket.on('disconnect', () => console.log('Socket disconnected:', socket.id))
-})
+initSocket(io)
 
 connectDB().then(() => {
   server.listen(PORT, () => {

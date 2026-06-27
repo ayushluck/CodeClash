@@ -9,7 +9,7 @@ import questionRoutes from './routes/question.routes';
 
 const app = express();
 
-app.use(cors({ origin: ENV.CLIENT_URL }));
+app.use(cors({ origin: ENV.CLIENT_URL }))
 app.use(express.json());
 
 // Health check

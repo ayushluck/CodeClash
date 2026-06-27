@@ -2,7 +2,6 @@ import { Response } from 'express';
 import { AuthRequest } from '../middleware/auth.middleware';
 import { UserModel } from '../models/User.model';
 import { BattleModel } from '../models/Battle.model';
-
 // GET /api/users/:id
 export const getUserProfile = async (req: AuthRequest, res: Response) => {
   try {
