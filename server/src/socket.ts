@@ -5,6 +5,7 @@ import { BattleModel } from './models/Battle.model';
 import { authenticateSocket } from './middleware/auth.middleware';
 import { startTimer } from './utils/timer';
 import { QuestionModel } from './models/Question.model';
+import { friendRoomService } from './services/friendRoom.service';
 
 export const initSocket = (io: Server) => {
   io.use(authenticateSocket);
@@ -132,7 +133,6 @@ export const initSocket = (io: Server) => {
         const battle = await BattleModel.findOne({ roomId });
         if (!battle) return;
 
-        // Import QuestionModel at the top of socket.ts
         const problem = await QuestionModel.findById(battle.problemId);
         if (!problem) return;
 
@@ -194,9 +194,111 @@ export const initSocket = (io: Server) => {
       });
     });
 
+    // ── FRIEND ROOM: CREATE ─────────────────────────────────────
+    socket.on('friend_room_create', ({ topic, difficulty, company }: {
+      topic: string;
+      difficulty: string;
+      company: string;
+    }) => {
+      if (!topic || !difficulty) {
+        socket.emit('friend_room_error', { message: 'Topic and difficulty are required' });
+        return;
+      }
+
+      const roomCode = friendRoomService.createRoom({
+        creatorId: userId,
+        creatorSocketId: socket.id,
+        topic,
+        difficulty: difficulty || 'Medium',
+        company: company || 'Any',
+      });
+
+      socket.join(roomCode);
+
+      socket.emit('friend_room_created', {
+        roomCode,
+        topic,
+        difficulty,
+        company: company || 'Any',
+      });
+
+      console.log(`🏠 Friend room created: ${roomCode} by ${userId}`);
+    });
+
+    // ── FRIEND ROOM: JOIN ───────────────────────────────────────
+    socket.on('friend_room_join', async ({ roomCode }: { roomCode: string }) => {
+      const upperCode = roomCode.toUpperCase();
+      const room = friendRoomService.getRoom(upperCode);
+
+      if (!room) {
+        socket.emit('friend_room_error', { message: 'Room not found. Check the code and try again.' });
+        return;
+      }
+
+      if (room.creatorId === userId) {
+        socket.emit('friend_room_error', { message: 'You cannot join your own room.' });
+        return;
+      }
+
+      socket.join(upperCode);
+
+      let problem;
+      try {
+        problem = await matchmakingService.getProblem(
+          room.topic,
+          room.difficulty,
+          room.company
+        );
+      } catch {
+        socket.emit('friend_room_error', { message: 'Could not find a question for this config.' });
+        return;
+      }
+
+      const roomId = upperCode;
+
+      await BattleModel.create({
+        roomId,
+        player1: room.creatorId,
+        player2: userId,
+        problemId: problem._id,
+        topic: room.topic,
+        status: 'active',
+        startedAt: new Date(),
+      });
+
+      const safeProblem = {
+        _id: problem._id,
+        title: problem.title,
+        description: problem.description,
+        difficulty: problem.difficulty,
+        topic: problem.topic,
+        companies: problem.companies,
+        examples: problem.examples,
+        constraints: problem.constraints,
+        starterCode: problem.starterCode,
+        timeLimit: problem.timeLimit,
+      };
+
+      io.to(upperCode).emit('friend_battle_start', {
+        roomId,
+        problem: safeProblem,
+        players: {
+          creator: room.creatorId,
+          joiner: userId,
+        },
+      });
+
+      startTimer(io, roomId, 1800);
+
+      friendRoomService.deleteRoom(upperCode);
+
+      console.log(`⚔️  Friend battle started: ${room.creatorId} vs ${userId} in room ${roomId}`);
+    });
+
     // ── DISCONNECT ──────────────────────────────────────────────
     socket.on('disconnect', () => {
       matchmakingService.removeFromQueue(socket.id);
+      friendRoomService.deleteBySocketId(socket.id);
       console.log(`❌ Socket disconnected — userId: ${userId}`);
     });
 
